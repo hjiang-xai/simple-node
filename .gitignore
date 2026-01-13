@@ -1,0 +1,13 @@
+# Rust / Cargo
+/target/
+**/*.rs.bk
+
+# OS
+.DS_Store
+
+# IDE / Editor
+.idea/
+.vscode/
+
+# Cursor project metadata (local)
+.cursor/
