@@ -1,0 +1,10 @@
+write path
+- o2_service::rx_part
+- BlockStore::write
+- FlatPoolHandle::write
+- returns until an enough portion of it finishes, trigger async writes in the background
+
+read path
+- read FDB get metadata on pool and block id
+- FlatPoolHandle::raw_read: router hashes block id into bucket id, otto (cluster coordinator) gets fragment set
+- fragment set contains host and disk information, where the read request will be routed to
